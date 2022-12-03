@@ -14,18 +14,21 @@ return new class extends Migration
     public function up()
     {
         Schema::create('etiquetas', function (Blueprint $table) {
+
             $table->id(); 
-            $table->string('name'); 
-            $table->text('description'); 
-            $table->text('adicional'); 
-            $table->string('marca');
-            $table->string('registrosan');
+            $table->text('description')->nullable(); 
+            $table->text('adicional')->nullable(); 
+
             $table->date('fechaenvasado');
             $table->date('caducidad');
             $table->decimal('peso',4,3);
             $table->decimal('preciokilo',5,2);  
             $table->decimal('precio',5,2);
             $table->timestamps(); 
+
+            $table->foreignId('marca_id')->constrained();
+            $table->foreignId('producto_id')->constrained();
+
         });
     }
 
