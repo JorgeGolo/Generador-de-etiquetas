@@ -3,7 +3,7 @@
 
 <h2>Resumen</h2>
 
-<p>Este proyecto pretende crear etiquetas para productos de una tienda física. Éstas deben tener un formato adecuado para uqe se puedan imprimir por una impresora técnica, con lo que su formato ha de estar bien configurado.</p>
+<p>Este proyecto pretende crear etiquetas para productos de una tienda física. Éstas deben tener un formato adecuado para que se puedan imprimir por una impresora técnica, con lo que su formato ha de estar bien configurado.</p>
 <p>Para ello, necesitamos manejar las distntas entidades, que serás clases, modelos, tablas... que son las siguientes:</p>
 <ul>
     <li>Etiquetas: Serán como tarjetas con distinta información de productos y marcas, precios, códigos...</li>
