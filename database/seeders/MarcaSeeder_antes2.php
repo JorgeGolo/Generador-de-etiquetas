@@ -15,7 +15,16 @@ class MarcaSeeder extends Seeder
      */
     public function run()
     {
-        Marca::factory(5)->create();
+        $marca = new Marca();
+        $marca->name="5 Jotas";
+        $marca->registrosan="RXhygy56";
+        $marca->save();
+
+        $marca2 = new Marca();
+        $marca2->name="Sánchez Romero Carvajal";
+        $marca2->registrosan="GHuty875E";
+        $marca2->save();
+
 
     }
 }

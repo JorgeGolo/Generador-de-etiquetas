@@ -21,9 +21,9 @@ return new class extends Migration
 
             $table->date('fechaenvasado');
             $table->date('caducidad');
-            $table->decimal('peso',4,3);
-            $table->decimal('preciokilo',5,2);  
-            $table->decimal('precio',5,2);
+            $table->decimal('peso',4,3)->nullable(); ;
+            $table->decimal('preciokilo',5,2)->nullable(); ;  
+            $table->decimal('precio',5,2)->nullable(); ;
             $table->timestamps(); 
 
             $table->foreignId('marca_id')->constrained();

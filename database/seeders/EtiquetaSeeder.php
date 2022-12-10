@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Marca;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Etiqueta;
 
-class MarcaSeeder extends Seeder
+class EtiquetaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,7 +15,7 @@ class MarcaSeeder extends Seeder
      */
     public function run()
     {
-        Marca::factory(5)->create();
+        Etiqueta::factory(20)->create();
 
     }
 }
