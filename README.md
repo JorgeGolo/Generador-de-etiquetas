@@ -17,9 +17,12 @@
 <p>La construcción de la base de datos requiere que las tablas estén relacionadas.<p>
 <p>Se podrá usar el motor de plantillas para maquetar convenientemente las etiquetas.</p>
 
-<h2>Estado actual del proyecto</h2>
+<h2>Resumen del estado del proyecto</h2>
 
-<p>Una vez creados los modelos, las tablas... de las tres entidade, se están configurando los factories para datos de prueba del CRUD.</p>
+<ul>
+    <li>Se ha establecido una estructura de rutas básica.</li>
+    <li>Una vez creados los modelos, las tablas... de las tres entidade, se están configurando los factories para datos de prueba del CRUD.</li>
+</ul>
 
 <hr/>
 <hr/>
