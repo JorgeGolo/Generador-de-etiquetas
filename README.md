@@ -15,8 +15,11 @@
 
 <p>Se usa Laravel para construir un CRUD para manejar la base de datos donde se almacena la información de las distintas entidades, además de poder establecer las relaciones que tienen entre sí.</p>
 <p>La construcción de la base de datos requiere que las tablas estén relacionadas.<p>
-<p>Se están creando factories para datos de prueba del CRUD.</p>
 <p>Se podrá usar el motor de plantillas para maquetar convenientemente las etiquetas.</p>
+
+<h2>Estado actual del proyecto</h2>
+
+<p>Una vez creados los modelos, las tablas... de las tres entidade, se están configurando los factories para datos de prueba del CRUD.</p>
 
 <hr/>
 <hr/>
