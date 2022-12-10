@@ -1,3 +1,31 @@
+<h1>Generador de etiquetas</h1>
+
+<h2>Resumen</h2>
+
+<p>Este proyecto pretende crear etiquetas para productos de una tienda física. Éstas deben tener un formato adecuado para que se puedan imprimir por una impresora técnica, con lo que su formato ha de estar bien configurado.</p>
+<p>Para ello, necesitamos manejar las distntas entidades, que serás clases, modelos, tablas... que son las siguientes:</p>
+<ul>
+    <li>Etiquetas: Serán como tarjetas con distinta información de productos y marcas, precios, códigos...</li>
+    <li>Productos: Cada marca podrá tener varios productos asociados.</li>
+    <li>Marcas: Cada marca debe tener un único código de registr5o sanitario, que es imprescindible que aparezca en cada etiqueta</li>
+</ul>
+    
+<h2>Detalles sobre el desarrollo</h2>
+
+<p>Se usa Laravel para construir un CRUD para manejar la base de datos donde se almacena la información de las distintas entidades, además de poder establecer las relaciones que tienen entre sí.</p>
+<p>La construcción de la base de datos requiere que las tablas estén relacionadas.<p>
+<p>Se podrá usar el motor de plantillas para maquetar convenientemente las etiquetas.</p>
+
+<h2>Resumen del estado del proyecto</h2>
+
+<ul>
+    <li>Se ha establecido una estructura de rutas básica.</li>
+    <li>Una vez creados los modelos, las tablas... de las tres entidade, se están configurando los factories para datos de prueba del CRUD.</li>
+</ul>
+
+<hr/>
+<hr/>
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
