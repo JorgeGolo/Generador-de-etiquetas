@@ -18,8 +18,8 @@ use App\Http\Controllers\EtiquetaController;
 
 Route::get('/', HomeController::class);
 
-Route::get('etiquetas', [EtiquetaController::class, 'index']);
+Route::get('etiquetas', [EtiquetaController::class, 'index'])->name('etiquetas.index');;
 
-Route::get('etiquetas/create', [EtiquetaController::class, 'create']);
+Route::get('etiquetas/create', [EtiquetaController::class, 'create'])->name('etiquetas.create');
 
-Route::get('etiquetas/{etique}', [EtiquetaController::class, 'show']);
+Route::get('etiquetas/{etique}', [EtiquetaController::class, 'show'])->name('etiquetas.show');;

@@ -22,11 +22,14 @@ class EtiquetaController extends Controller
         return view('etiquetas.create');
     }
 
-    public function show($etique) {
+    public function show($id) {
         // return "Url con variable $etique";
         // hayq ue pasarle la variabe a la vista
 
-        return view('etiquetas.show', ['etique' => $etique]);
+
+        $etique = Etiqueta::find($id);
+
+
         return view('etiquetas.show', compact('etique'));
     }
 }
