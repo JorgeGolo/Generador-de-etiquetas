@@ -8,7 +8,7 @@
     @foreach ($etiquetas as $etiqueta)
             <!-- <li>{{$etiqueta}}</li> -->
             <!-- <li>nombre producto: {{$etiqueta->producto->name}}, marca: {{$etiqueta->producto->marca->name}}, registro sanitario: {{$etiqueta->producto->marca->registrosan}}</li> -->
-            <!-- <li>{{$etiqueta->producto->name}}</li> -->
+            <!-- <li>{{$etiqueta->producto->marca->name}}</li> -->
             <li><a href="{{route('etiquetas.show', $etiqueta->id)}}">{{$etiqueta->producto->name}}</a></li>
     @endforeach
 

@@ -26,7 +26,6 @@ return new class extends Migration
             $table->decimal('precio',5,2)->nullable(); ;
             $table->timestamps(); 
 
-            $table->foreignId('marca_id')->constrained();
             $table->foreignId('producto_id')->constrained();
 
         });
