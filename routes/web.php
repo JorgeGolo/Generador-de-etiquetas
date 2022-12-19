@@ -35,4 +35,8 @@ Route::get('marcas/{marc}', [MarcaController::class, 'show'])->name('marcas.show
 
 Route::post('marcas/store',  [MarcaController::class, 'store'])->name('marcas.store');
 
+Route::get('marcas/{marca}/edit', [MarcaController::class, 'edit'])->name('marcas.edit');
+
+Route::put('marcas/{marca}', [MarcaController::class, 'update'])->name('marcas.update');
+
 

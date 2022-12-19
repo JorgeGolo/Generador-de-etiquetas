@@ -15,6 +15,10 @@
 
     <hr/>
 
+    <a href="{{route('marcas.edit', $marc)}}">Editar</a>
+
+    <hr>
+
     Productos de esa marca:
 
     <ul>
