@@ -31,8 +31,8 @@ class EtiquetaFactory extends Factory
             'adicional' => $this->faker->sentence(3),
             'fechaenvasado' => $fechaActual,
             'caducidad' => $caducidad,
-            'marca_id' => rand(1, Marca::count()),
-            'producto_id' => rand(1, Producto::count())
+            'producto_id' => rand(1, Producto::count()),
+            'peso' => $this->faker->randomElement([0.080,0.100])
 
         ];
     }

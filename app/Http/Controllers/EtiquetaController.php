@@ -11,7 +11,10 @@ class EtiquetaController extends Controller
         // return 'Esta es la lista de etiquetas';
         // return view('etiquetas.index');
 
-        $etiquetas =  Etiqueta::all();
+        // $etiquetas =  Etiqueta::all();
+
+        $etiquetas =  Etiqueta::orderBy('id','DESC')->get();
+
         return view("etiquetas.index", compact('etiquetas'));
 
         
@@ -26,9 +29,7 @@ class EtiquetaController extends Controller
         // return "Url con variable $etique";
         // hayq ue pasarle la variabe a la vista
 
-
         $etique = Etiqueta::find($id);
-
 
         return view('etiquetas.show', compact('etique'));
     }

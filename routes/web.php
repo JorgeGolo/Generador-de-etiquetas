@@ -29,6 +29,7 @@ Route::get('etiquetas/{etique}', [EtiquetaController::class, 'show'])->name('eti
 
 Route::get('marcas', [MarcaController::class, 'index'])->name('marcas.index');
 
+
 Route::get('marcas/create', [MarcaController::class, 'create'])->name('marcas.create');
 
 Route::get('marcas/{marc}', [MarcaController::class, 'show'])->name('marcas.show');

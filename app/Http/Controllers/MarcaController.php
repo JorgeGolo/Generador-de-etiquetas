@@ -9,8 +9,12 @@ class MarcaController extends Controller
 {
     public function index() {
 
-        $marcas =  Marca::all();
+        // $marcas =  Marca::all();
+        
+        $marcas =  Marca::orderBy('id','DESC')->get();
+
         return view("marcas.index", compact('marcas'));
+
         
 
     }
@@ -30,6 +34,11 @@ class MarcaController extends Controller
     public function store(Request $request) {
 
         // return $request->all();
+
+        $request->validate([
+            'name' => 'required',
+            'regsan' => 'required',
+        ]);
 
         $marca = new Marca();
 
@@ -64,7 +73,7 @@ class MarcaController extends Controller
 
         // return redirect()->route('marcas.show',$marca->id);
 
-        return redirect()->route('marcas.show',$marca);
+        return redirect()->route('marcas.index',$marca);
     }
 
 }
