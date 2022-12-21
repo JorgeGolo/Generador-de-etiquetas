@@ -21,13 +21,6 @@ use App\Http\Controllers\ProductoController;
 
 Route::get('/', HomeController::class)->name('home');
 
-Route::get('etiquetas', [EtiquetaController::class, 'index'])->name('etiquetas.index');
-
-Route::get('etiquetas/create', [EtiquetaController::class, 'create'])->name('etiquetas.create');
-
-Route::get('etiquetas/{etique}', [EtiquetaController::class, 'show'])->name('etiquetas.show');
-
-
 Route::get('marcas', [MarcaController::class, 'index'])->name('marcas.index');
 
 Route::get('marcas/create', [MarcaController::class, 'create'])->name('marcas.create');
@@ -45,4 +38,13 @@ Route::delete('marcas/{marca}',[MarcaController::class, 'destroy'])->name('marca
 
 // Route::get('productos', [ProductoController::class, 'index'])->name('productos.index');
 
+// ...
+
 Route::resource('productos', ProductoController::class);
+
+
+Route::get('etiquetas', [EtiquetaController::class, 'index'])->name('etiquetas.index');
+
+Route::get('etiquetas/create', [EtiquetaController::class, 'create'])->name('etiquetas.create');
+
+Route::get('etiquetas/{etique}', [EtiquetaController::class, 'show'])->name('etiquetas.show');

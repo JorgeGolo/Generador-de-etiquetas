@@ -22,6 +22,7 @@ class MarcaController extends Controller
     public function create() {
 
         return view("marcas.create");
+
     }
 
     public function show($id) {
@@ -59,7 +60,7 @@ class MarcaController extends Controller
     }
 
     public function edit(Marca $marca){
-        // $curso = Curso::find($id);
+        // $marca = Marca::find($id);
         return view("marcas.edit", compact("marca"));
     }
 
@@ -73,7 +74,6 @@ class MarcaController extends Controller
 
 
     public function update(Request $request, Marca $marca) {
-
 
         $request->validate([
             'name' => 'required',

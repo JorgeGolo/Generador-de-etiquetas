@@ -9,6 +9,7 @@ class Producto extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name','marca_id'];
 
     public function marca() {
  
