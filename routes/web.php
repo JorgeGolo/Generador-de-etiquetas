@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EtiquetaController;
 use App\Http\Controllers\MarcaController;
+use App\Http\Controllers\ProductoController;
 
 
 
@@ -18,7 +19,7 @@ use App\Http\Controllers\MarcaController;
 |
 */
 
-Route::get('/', HomeController::class);
+Route::get('/', HomeController::class)->name('home');
 
 Route::get('etiquetas', [EtiquetaController::class, 'index'])->name('etiquetas.index');
 
@@ -28,7 +29,6 @@ Route::get('etiquetas/{etique}', [EtiquetaController::class, 'show'])->name('eti
 
 
 Route::get('marcas', [MarcaController::class, 'index'])->name('marcas.index');
-
 
 Route::get('marcas/create', [MarcaController::class, 'create'])->name('marcas.create');
 
@@ -40,4 +40,9 @@ Route::get('marcas/{marca}/edit', [MarcaController::class, 'edit'])->name('marca
 
 Route::put('marcas/{marca}', [MarcaController::class, 'update'])->name('marcas.update');
 
+Route::delete('marcas/{marca}',[MarcaController::class, 'destroy'])->name('marcas.destroy');
 
+
+// Route::get('productos', [ProductoController::class, 'index'])->name('productos.index');
+
+Route::resource('productos', ProductoController::class);

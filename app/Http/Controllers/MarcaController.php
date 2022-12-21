@@ -40,14 +40,22 @@ class MarcaController extends Controller
             'regsan' => 'required',
         ]);
 
-        $marca = new Marca();
+        // Estas tres líneas se sustituyen por el método create de la clase Marca 
+        // no es necesario instanciar el objeto
 
-        $marca->name = $request->name;
-        $marca->registrosan = $request->regsan;
+        // $marca = new Marca();
+        // $marca->name = $request->name;
+        // $marca->registrosan = $request->regsan;
+
+        $marca = Marca::create([
+            'name' => $request->name,
+            'registrosan' => $request->regsan
+        ]);
+        
 
         $marca->save();
         
-        return redirect()->route('marcas.show',$marca);
+        return redirect()->route('marcas.index',$marca);
     }
 
     public function edit(Marca $marca){
@@ -66,14 +74,34 @@ class MarcaController extends Controller
 
     public function update(Request $request, Marca $marca) {
 
+
+        $request->validate([
+            'name' => 'required',
+            'regsan' => 'required',
+        ]);
+
         $marca->name = $request->name;
         $marca->registrosan = $request->regsan;
-
         $marca->save();
 
+        // podríamos comentamos las tres líneas siguientes, parecido a como hicimos en el método store
+        // para utilizar el método update con la colección de request como parámetro 
+        // pero creo que esta vez no funciona porque 
+        // el campo del formulario y el campo de la base de datos no se llaman EXACTAMENTE IGUAL
+        // dejo la línea comentada
+
+        // $marca->update($request->all());
+
+        // no es necesario pasar la variable id, con el objeto es suficiente
         // return redirect()->route('marcas.show',$marca->id);
 
         return redirect()->route('marcas.index',$marca);
     }
+
+    public function destroy(Marca $marca) {
+        $marca->delete();
+        return redirect()->route('marcas.index');
+
+    }  
 
 }

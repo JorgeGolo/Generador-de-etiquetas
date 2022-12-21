@@ -19,7 +19,15 @@ return new class extends Migration
             $table->string('name');
             $table->timestamps();
 
-            $table->foreignId('marca_id')->constrained();
+            // nullable y nullOnDelete so necesarias por si borramos una marca...
+            // es el comportamiento de la
+            // restricción de integridad referencial
+            // https://es.stackoverflow.com/questions/105890/qu%c3%a9-significa-cascade-set-null-restrict-no-action-en-mysql
+            // https://stackoverflow.com/questions/20869072/laravel-schema-ondelete-set-null
+
+            // en la tabla productos también hemos aplicado estos métodos
+            
+            $table->foreignId('marca_id')->nullable()->constrained()->onDelete('cascade');
 
         });
     }

@@ -2,8 +2,9 @@
 
 @section('title', 'Creador de marcas')
 
+<h1>Creador de marcas</h1>
+
 @section('content')
-    <h1>Creador de marcas</h1>
 
     <form action="{{route('marcas.store')}}" method="POST">
     @csrf

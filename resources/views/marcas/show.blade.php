@@ -17,12 +17,15 @@
 
     <a href="{{route('marcas.edit', $marc)}}">Editar</a>
 
+    <hr/>
+
+    <form action="{{route('marcas.destroy',$marc)}}" method="POST">
+        @csrf
+        @method('delete')
+        <button type="submit">Eliminar</button>
+    </form>
+    <span style="color: red">ATENCIÓN: Este botón borrará todos los productos y etiquetas asociados con esta marca</span>
     <hr>
 
-    Productos de esa marca:
-
-    <ul>
-    <li>Aquí podríamos insertar un enlace para añadir productos</li>
-    </ul>
-
+ 
 @endsection
