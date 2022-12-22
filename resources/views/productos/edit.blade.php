@@ -1,9 +1,9 @@
 @extends('layouts.plantilla')
 
-@section('title', 'Editor de marcas')
+@section('title', 'Editor de productos')
 
 @section('content')
-    <h1>Editor de marcas</h1>
+    <h1>Editor de productos</h1>
 
     <form action="{{route('productos.update', $producto)}}" method="POST">
     @csrf

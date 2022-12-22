@@ -17,20 +17,19 @@ class EtiquetaFactory extends Factory
      * @return array<string, mixed>
      */
     public function definition()
-
     
     {
 
-
         $fechaActual = date('d/m/y');
-        $caducidad = date('Y-m-d' , strtotime("+3 months"));
+        $fechacaducidad = date('Y-m-d' , strtotime("+6 months"));
 
         return [
   
-            'description' => $this->faker->sentence(4),
+            'name' => $this->faker->sentence(3),
             'adicional' => $this->faker->sentence(3),
             'fechaenvasado' => $fechaActual,
-            'caducidad' => $caducidad,
+            'caducidad' => 6,
+            'fechacaducidad' => $fechacaducidad,
             'producto_id' => rand(1, Producto::count()),
             'peso' => $this->faker->randomElement([0.080,0.100])
 

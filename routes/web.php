@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EtiquetaController;
 use App\Http\Controllers\MarcaController;
 use App\Http\Controllers\ProductoController;
+USE App\Http\Controllers\PdfController;
 
 
 
@@ -43,8 +44,15 @@ Route::delete('marcas/{marca}',[MarcaController::class, 'destroy'])->name('marca
 Route::resource('productos', ProductoController::class);
 
 
-Route::get('etiquetas', [EtiquetaController::class, 'index'])->name('etiquetas.index');
+// Route::get('etiquetas', [EtiquetaController::class, 'index'])->name('etiquetas.index');
 
-Route::get('etiquetas/create', [EtiquetaController::class, 'create'])->name('etiquetas.create');
+// Route::get('etiquetas/create', [EtiquetaController::class, 'create'])->name('etiquetas.create');
 
-Route::get('etiquetas/{etique}', [EtiquetaController::class, 'show'])->name('etiquetas.show');
+// Route::get('etiquetas/{etique}', [EtiquetaController::class, 'show'])->name('etiquetas.show');
+
+
+Route::resource('etiquetas', EtiquetaController::class);
+
+Route::get('etiqueta/{etiquet}', [EtiquetaController::class, 'pdf'])->name('etiqueta.pdf');
+
+

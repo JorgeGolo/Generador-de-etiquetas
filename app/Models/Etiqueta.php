@@ -9,8 +9,9 @@ class Etiqueta extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'producto_id', 'adicional', 'fechaenvasado', 'fechacaducidad', 'peso', 'preciokilo', 'precio'];
 
-    public function producto(){
+    public function producto() {
 
         return $this->belongsTo(Producto::class);
 

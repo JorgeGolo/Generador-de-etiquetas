@@ -8,10 +8,7 @@
     <!-- favicon -->
     <!-- estilos -->
     <style>
-        .active {
-            font-weight: bold;
-            color: red
-        }
+ 
     </style>
 </head>
 <body>

@@ -16,14 +16,15 @@ return new class extends Migration
         Schema::create('etiquetas', function (Blueprint $table) {
 
             $table->id(); 
-            $table->text('description')->nullable(); 
+            $table->text('name'); 
             $table->text('adicional')->nullable(); 
 
-            $table->date('fechaenvasado');
-            $table->date('caducidad');
-            $table->decimal('peso',4,3)->nullable(); ;
-            $table->decimal('preciokilo',5,2)->nullable(); ;  
-            $table->decimal('precio',5,2)->nullable(); ;
+            $table->date('fechaenvasado')->nullable(); 
+            $table->integer('caducidad')->nullable();
+            $table->date('fechacaducidad')->nullable();
+            $table->decimal('peso',4,3)->nullable(); 
+            $table->decimal('preciokilo',5,2)->nullable();    
+            $table->decimal('precio',5,2)->nullable(); 
             $table->timestamps(); 
 
             $table->foreignId('producto_id')->nullable()->constrained()->onDelete('cascade');
