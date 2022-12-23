@@ -7,10 +7,15 @@
 
     <h3><a href="{{route('etiquetas.create')}}">Crear etiqueta</a></h3>
 
-    @foreach ($etiquetas as $etiqueta)
-            <li><a href="{{route('etiquetas.show', $etiqueta->id)}}">{{$etiqueta->name}}</a>// 
-            <a href="{{route('etiquetas.edit', $etiqueta->id)}}">Editar</a> // 
-            <a href="{{route('etiqueta.pdf', $etiqueta->id)}}">PDF</a></li>
-    @endforeach
+    <table class="tablaetiquetas">
+        @foreach ($etiquetas as $etiqueta)
+        <tr>
+            <td><a href="{{route('etiquetas.show', $etiqueta->id)}}">{{$etiqueta->name}}</a></td>
+            <td><a href="{{route('etiquetas.edit', $etiqueta->id)}}">Editar</a></td>
+            <td><a href="{{route('etiqueta.pdf', $etiqueta->id)}}">Vista previa</a></td>
+            <td><a href="{{route('getpdf', $etiqueta->id)}}">PDF</a></li></td>
+        </tr>   
+        @endforeach
+    </table>
 
 @endsection

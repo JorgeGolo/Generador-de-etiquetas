@@ -5,9 +5,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EtiquetaController;
 use App\Http\Controllers\MarcaController;
 use App\Http\Controllers\ProductoController;
-USE App\Http\Controllers\PdfController;
+use App\Http\Controllers\PDFController;
 
-
+use Barryvdh\DomPDF\Facade\Pdf AS PDF;
+use App\Models\Etiqueta;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,7 +44,6 @@ Route::delete('marcas/{marca}',[MarcaController::class, 'destroy'])->name('marca
 
 Route::resource('productos', ProductoController::class);
 
-
 // Route::get('etiquetas', [EtiquetaController::class, 'index'])->name('etiquetas.index');
 
 // Route::get('etiquetas/create', [EtiquetaController::class, 'create'])->name('etiquetas.create');
@@ -55,4 +55,27 @@ Route::resource('etiquetas', EtiquetaController::class);
 
 Route::get('etiqueta/{etiquet}', [EtiquetaController::class, 'pdf'])->name('etiqueta.pdf');
 
+// Route::get('pdf', [PdfController::class, 'index']);
 
+// Route::get('/pdf', 'PDFController@getPDF')->name('getpdf');
+
+// Route::get('pdf', [PDFController::class, 'getpdf'])->name('getpdf');
+
+// Route::get('pdf', function() {
+
+//     $name = "Juanito Perez";
+//     $pdf = PDF::loadView('PDF_Example', compact('name'));
+//     return $pdf->stream('prueba.pdf');
+
+// })->name('getpdf');
+
+
+Route::get('pdf/{etique}', function($id) {
+
+    $etique = Etiqueta::find($id);
+    $pdf = PDF::loadView('etiquetas.pdf', compact('etique'));
+    $pdf->set_paper(array(0,0,650,531));
+
+    return $pdf->stream('prueba.pdf');
+
+})->name('getpdf');

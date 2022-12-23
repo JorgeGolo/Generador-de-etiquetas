@@ -26,7 +26,7 @@ class EtiquetaFactory extends Factory
         return [
   
             'name' => $this->faker->sentence(3),
-            'adicional' => $this->faker->sentence(3),
+            'adicional' => "Conservar en frío",
             'fechaenvasado' => $fechaActual,
             'caducidad' => 6,
             'fechacaducidad' => $fechacaducidad,

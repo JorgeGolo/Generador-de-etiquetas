@@ -8,7 +8,16 @@
     <!-- favicon -->
     <!-- estilos -->
     <style>
- 
+        .active {
+            font-weight: bold;
+            color: red
+        }
+
+        .tablaetiquetas td {
+            padding: 0.2em;
+            margin: 0;
+            border:1px solid gray;
+        }
     </style>
 </head>
 <body>

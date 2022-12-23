@@ -7,20 +7,31 @@
     <title></title>
 
     <!-- oswald -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-    
-    <!-- anton -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"> -->
     
     <!-- favicon -->
     <!-- estilos -->
     <style>
 
+        @page {
+            margin: 0 0;
+            size: 650px 531px landscape;
+        }
+
+        @font-face {
+            font-family: 'oswald';
+            src: url("{{ public_path('/resources/fonts/Oswald-Regular.ttf')}}") format('truetype');
+
+        }
+
         body {
-            max-width: 650px;
-            max-height: 351px;
+            width: 650px;
+            /* max-height: 351px; */
             margin: 0;
-            padding: 0
+            padding: 0;
+            font-weight: bold;
         }
         .active {
             font-weight: bold;
@@ -30,6 +41,9 @@
         .tablaetique {
             text-align: center;
             font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+            width: 100%;
+            margin: 0;
+            padding: 0;
         }
 
         .tablaetique img {
@@ -45,38 +59,38 @@
         }
 
         .pequedos {
-            font-family: 'Oswald', sans-serif;
-            font-size:1.3em;
+            font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+            font-size:1.5em;
             line-height: 1em;
 
         }
 
         .pequetres {
-            font-family: 'Oswald', sans-serif;
+            /* font-family: 'Oswald', sans-serif; */
+            font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
             font-size:1.6em
         }
 
         .linea td {
-            border-bottom: 1px solid black
+            border-bottom: 2px solid black
+        }
+        .titulo {
+            vertical-align: middle;
         }
 
         .nombreprod {
             text-transform: uppercase;
+            display: block;
+            line-height: 2em;
         }
 
         .grandeuno {
-            font-size: 3.75em;
-            font-weight: bold;
-            font-family: 'Oswald', sans-serif;
-            line-height: 1em;
-
+            font-size: 3.7em;
+            /* font-family: 'Oswald', sans-serif; */
+            font-family: 'oswald', sans-serif;
         }
 
-        @media print {
-  @page { margin: 0; }
-  body { margin: 2cm; }
-}
-        
+       
 
         
     </style>

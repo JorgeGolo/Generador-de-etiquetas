@@ -6,6 +6,7 @@ use App\Models\Etiqueta;
 use App\Models\Marca;
 use App\Models\Producto;
 use Illuminate\Http\Request;
+use PDF;
 
 class EtiquetaController extends Controller
 {
@@ -39,13 +40,7 @@ class EtiquetaController extends Controller
         return view('etiquetas.show', compact('etique'));
     }
 
-    public function pdf($id) {
 
-        $etique = Etiqueta::find($id);
-
-        return view('etiquetas.pdf', compact('etique'));
-
-    }
 
     public function store(Request $request) {
 
@@ -87,5 +82,15 @@ class EtiquetaController extends Controller
         $productos = Producto::all();
         return view("etiquetas.edit", compact("etiqueta"))->with(compact("marcas"))->with(compact("productos"));
     }
+
+        public function pdf($id) {
+
+        $etique = Etiqueta::find($id);
+
+        return view('etiquetas.pdf', compact('etique'));
+
+    }
+
+
 
 }
