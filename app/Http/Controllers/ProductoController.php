@@ -27,6 +27,12 @@ class ProductoController extends Controller
 
     public function store(Request $request) {
 
+
+        $request->validate([
+            'name' => 'required',
+        ]);
+
+
         $producto = Producto::create([
             'name' => $request->name,
             'marca_id' => $request->marca_id

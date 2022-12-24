@@ -22,7 +22,7 @@ return new class extends Migration
             $table->date('fechaenvasado')->nullable(); 
             $table->integer('caducidad')->nullable();
             $table->date('fechacaducidad')->nullable();
-            $table->decimal('peso',4,3)->nullable(); 
+            $table->decimal('peso',5,3)->nullable(); 
             $table->decimal('preciokilo',5,2)->nullable();    
             $table->decimal('precio',5,2)->nullable(); 
             $table->timestamps(); 

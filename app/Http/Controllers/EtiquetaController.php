@@ -6,7 +6,7 @@ use App\Models\Etiqueta;
 use App\Models\Marca;
 use App\Models\Producto;
 use Illuminate\Http\Request;
-use PDF;
+
 
 class EtiquetaController extends Controller
 {
@@ -19,8 +19,7 @@ class EtiquetaController extends Controller
         $etiquetas =  Etiqueta::orderBy('id','DESC')->get();
 
         return view("etiquetas.index", compact('etiquetas'));
-
-        
+       
 
     }
 
@@ -90,6 +89,7 @@ class EtiquetaController extends Controller
         return view('etiquetas.pdf', compact('etique'));
 
     }
+
 
 
 

@@ -1,8 +1,8 @@
 @extends('layouts.plantilla')
 
-@section('title', 'Creador de marcas')
+@section('title', 'Creador de Productos')
 
-<h1>Creador de marcas</h1>
+<h1>Creador de Productos</h1>
 
 @section('content')
 
@@ -14,13 +14,14 @@
             <input type="text" name="name" value="{{old('name')}}">
         </label>
 
+        @error('name')
+            <br>
+                <small>*{{$message}}</small>
+            <br>
+        @enderror
 
         <br>
 
-        <!-- <label>
-            Marca:<br>
-            <input type="text" name="marca_id" value="{{old('marca_id')}}">
-        </label> -->
 
         <label>
             Marca:<br>

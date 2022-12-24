@@ -4,8 +4,8 @@
     
     <table class="tablaetique">
     <tr>
-        <td valign="middle" colspan="3">
-            <span class="nombreprod grandeuno">{{$etique->producto->name}}</span>
+        <td valign="middle" colspan="3" class="cabeceranombre">
+            {{$etique->producto->name}}
         </td>
     </tr>
 

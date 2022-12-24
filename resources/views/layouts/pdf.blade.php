@@ -5,25 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-
-    <!-- oswald -->
-
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"> -->
     
     <!-- favicon -->
     <!-- estilos -->
+
     <style>
 
         @page {
             margin: 0 0;
             size: 650px 531px landscape;
-        }
-
-        @font-face {
-            font-family: 'oswald';
-            src: url("{{ public_path('/resources/fonts/Oswald-Regular.ttf')}}") format('truetype');
-
         }
 
         body {
@@ -66,9 +56,9 @@
         }
 
         .pequetres {
-            /* font-family: 'Oswald', sans-serif; */
             font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-            font-size:1.6em
+            font-size:1.6em;
+            text-transform: uppercase;
         }
 
         .linea td {
@@ -78,18 +68,21 @@
             vertical-align: middle;
         }
 
-        .nombreprod {
+        .cabeceranombre {
+            font-size:3.8em; 
+            vertical-align:middle;
+            height:140px;
             text-transform: uppercase;
-            display: block;
-            line-height: 2em;
+            letter-spacing: -0.05em;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;            
+            line-height: 1em;
         }
 
         .grandeuno {
             font-size: 3.7em;
-            /* font-family: 'Oswald', sans-serif; */
-            font-family: 'oswald', sans-serif;
+            letter-spacing: -0.04em;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
-
        
 
         

@@ -147,7 +147,7 @@ return [
     */
 
     'attributes' => [
-        'name' => 'marca',
+        'name' => 'nombre',
         'regsan' => 'registro sanitario'
     ],
 
