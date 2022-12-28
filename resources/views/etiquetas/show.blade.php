@@ -19,7 +19,16 @@
         <li><strong>Precio:</strong> {{$etique->precio}}</li>
     </ul>
         
+
+    <hr/>
+
+    <form action="{{route('etiquetas.destroy',$etique)}}" method="POST">
+        @csrf
+        @method('delete')
+        <button type="submit">Eliminar</button>
+    </form>
+    <span style="color: red">ATENCIÓN: Esta opción es irreversible.</span>
     <hr>
-    <hr>
+
 
 @endsection

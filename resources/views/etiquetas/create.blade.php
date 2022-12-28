@@ -16,7 +16,12 @@
                 </td>
                 <td>
                 <input type="text" name="name" value="{{old('name')}}">
-                </td>
+
+                @error('name')
+                        <small>*{{$message}}</small>
+                @enderror
+
+                </td>                    
             </tr>
             <tr>
                 <td>
@@ -25,20 +30,7 @@
                 <td>
                     <select name="producto_id">
                     @foreach ($productos as $prod)
-                        <option value="{{$prod->id}}">{{$prod->name}}</option>
-                    @endforeach
-                    </select>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    Marca:
-                </td>
-                <td>
-                    <select name="marca_id">
-                    @foreach ($marcas as $marc)
-                        <option value="{{$marc->id}}">{{$marc->name}}</option>
+                        <option value="{{$prod->id}}">{{$prod->name}} // {{$prod->marca->name}}</option>
                     @endforeach
                     </select>
                 </td>
@@ -58,7 +50,9 @@
                     Fecha envasado:
                 </td>
                 <td>
-                    <input type="date" name="fechaenvasado" value="{{old('fechaenvasado')}}" min="2018-01-01" max="2028-12-31">
+                    <!-- <input type="date" name="fechaenvasado" id="fechaenvasado" value="{{old('fechaenvasado')}}" min="2018-01-01" max="2028-12-31"> -->
+                    <input type="date" name="fechaenvasado" id="fechaenvasado" value="" min="2018-01-01" max="2028-12-31">
+
                 </td>
             </tr>
 
@@ -67,7 +61,7 @@
                     Fecha caducidad:
                 </td>
                 <td>
-                    <input type="date" name="fechacaducidad" value="{{old('fechacaducidad')}}" min="2018-01-01" max="2028-12-31">
+                    <input type="date" name="fechacaducidad" id="fechacaducidad" value="" min="2018-01-01" max="2028-12-31">
                 </td>
             </tr>
 
@@ -77,7 +71,14 @@
                 </td>
                 <td>
                     <input type="text" name="peso" value="{{old('peso')}}">
+
+                    @error('peso')
+                        <small>*{{$message}}</small>
+                    @enderror
+
                 </td>
+
+
             </tr>
 
             <tr>

@@ -32,7 +32,7 @@ class EtiquetaController extends Controller
 
     public function show($id) {
         // return "Url con variable $etique";
-        // hayq ue pasarle la variabe a la vista
+        // hay que pasarle la variable a la vista
 
         $etique = Etiqueta::find($id);
 
@@ -42,6 +42,19 @@ class EtiquetaController extends Controller
 
 
     public function store(Request $request) {
+
+        // ojo con esta validación de los campos numéricos
+        // en la base de datos, el campo pèso está establecido como con 5 dígitos máximo, y dos decimales
+        // lo cual establaece que el m ayor número enteroq eu se puede escribir es el 99
+        // he comprobado que trunca los decimales uqe hay de más /(por ejemplo, si escribo 89,58587458 no da problemas)
+        // los otros campos numéricos siguen la misma "norma" de validación
+
+        $request->validate([
+            'name' => 'required',
+            'peso' => 'numeric|max:99',
+            'precio' => 'numeric|max:999',
+            'preciokilo' => 'numeric|max:999',
+        ]);
 
         $etiqueta = Etiqueta::create([
             'name' => $request->name,
@@ -71,8 +84,11 @@ class EtiquetaController extends Controller
 
 
     public function destroy(Etiqueta $etiqueta) {
+
         $etiqueta->delete();
+
         return redirect()->route('etiquetas.index');
+
     }  
 
 

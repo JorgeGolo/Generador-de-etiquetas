@@ -26,20 +26,7 @@
             <td>
                 <select name="producto_id">
                 @foreach ($productos as $prod)
-                    <option value="{{$prod->id}}" {{$prod->name==$etiqueta->producto->name ? 'selected' : ''}}>{{$prod->name}}</option>
-                @endforeach
-                </select>
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                Marca:
-            </td>
-            <td>
-                <select name="marca_id">
-                @foreach ($marcas as $marc)
-                    <option value="{{$marc->id}}" {{$marc->name==$etiqueta->producto->marca->name ? 'selected' : ''}}>{{$marc->name}}</option>
+                    <option value="{{$prod->id}}" {{$prod->name==$etiqueta->producto->name ? 'selected' : ''}}>{{$prod->name}} // {{$prod->marca->name}}</option>
                 @endforeach
                 </select>
             </td>
@@ -77,8 +64,10 @@
                 Peso:
             </td>
             <td>
-                <input type="text" name="peso" value="{{old('peso',$etiqueta->peso)}}">
+                <!-- <input id="inputpeso" onKeyUp="modificar(this)" type="text" name="peso" value="{{old('peso',$etiqueta->peso)}}"> -->
+                <input id="inputpeso" type="text" onKeyUp="mmoddos()" name="peso" value="{{old('peso',$etiqueta->peso)}}">
             </td>
+            
         </tr>
 
         <tr>
@@ -86,7 +75,7 @@
                 Precio kilo:
             </td>
             <td>
-                <input type="text" name="preciokilo" value="{{old('preciokilo',$etiqueta->preciokilo)}}">
+                <input id="inputpreciokilo" type="text" onKeyUp="mmoddos()" name="preciokilo" value="{{old('preciokilo',$etiqueta->preciokilo)}}">
             </td>
         </tr>
 
@@ -95,7 +84,7 @@
                 Precio:
             </td>
             <td>
-                <input type="text" name="precio" value="{{old('precio',$etiqueta->precio)}}">
+                <input id="inputprecio" onKeyUp="calcularprecio()" type="text" name="precio" value="{{old('precio',$etiqueta->precio)}}">
             </td>
         </tr>
     </table>
