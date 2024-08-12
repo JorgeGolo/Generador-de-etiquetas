@@ -3,7 +3,7 @@
 <h2>Resumen</h2>
 
 <p>Este proyecto pretende crear etiquetas para productos de una tienda física. Éstas deben tener un formato adecuado para que se puedan imprimir por una impresora técnica, con lo que su formato ha de estar bien configurado.</p>
-<p>Para ello, necesitamos manejar las distntas entidades, que serás clases, modelos, tablas... que son las siguientes:</p>
+<p>Para ello, necesitamos manejar las entidades, que serás clases, modelos, tablas... que son las siguientes:</p>
 <ul>
     <li>Etiquetas: Serán como tarjetas con distinta información de productos y marcas, precios, códigos...</li>
     <li>Productos: Cada marca podrá tener varios productos asociados.</li>
@@ -12,7 +12,7 @@
     
 <h2>Detalles sobre el desarrollo</h2>
 
-<p>Se usa Laravel para construir un CRUD para manejar la base de datos donde se almacena la información de las distintas entidades, además de poder establecer las relaciones que tienen entre sí.</p>
+<p>Se usa Laravel para construir un CRUD para manejar la base de datos donde se almacena la información de las entidades, además de poder establecer las relaciones que tienen entre sí.</p>
 <p>La construcción de la base de datos requiere que las tablas estén relacionadas.<p>
 <p>Se podrá usar el motor de plantillas para maquetar convenientemente las etiquetas.</p>
 
